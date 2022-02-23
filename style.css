@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+#container {
+  display: flex;
+  flex-flow: row wrap;
+  min-height: 960px;
+  min-width: 960px;
+}
+.grid {
+  margin: 0;
+  padding: 0;
+  border: 1px solid blue;
+  height: 100px;
+  width: 100px;
+}
+.button {
+  height: 80px;
+  width: 160px;
+  margin-bottom: 100px;
+  margin-left: 550px;
+  background-color: red;
+  border-radius: 60px;
+  font-size: xx-large;
+  font-weight: 700;
+  font-family: cursive;
+}
+.clear {
+  display: none;
+}
+.clicked {
+  background-color: yellow;
+  box-shadow: 0 5px lime;
+  transform: translateY(4px);
+}
