@@ -3,6 +3,15 @@ const container = document.querySelector("#container");
 let containerWidth = parseInt(document.querySelector("#container").clientWidth);
 let containerHeigth = parseInt(document.querySelector("#container").clientHeight);
 
+// random color generator
+function ColorCode() {
+    let makingColorCode = '0123456789ABCDEF';
+    let finalCode = '#';
+    for (let counter = 0; counter < 6; counter++) {
+        finalCode =finalCode+ makingColorCode[Math.floor(Math.random() * 16)];
+    }
+    return finalCode;
+}
 
 function userInput(){
     let x = parseInt(prompt("How many squares per side?: "));
@@ -19,8 +28,8 @@ function createGrid(x){
     for (let row = 0; row < x; row++){
         for (let col = 0; col < x; col++){
             let divs = document.createElement("div");
-            divs.addEventListener("mouseover", () => divs.style.backgroundColor = "yellow")
-            divs.addEventListener("mouseout", () => divs.style.backgroundColor = "white");
+            divs.addEventListener("mouseover", () => divs.style.backgroundColor = ColorCode());
+            divs.addEventListener("mouseout", () => divs.style.backgroundColor = ColorCode());
             divs.className ="grid";
             container.appendChild(divs)
         }
@@ -46,6 +55,8 @@ btn.className = "button"
 btn.textContent = "Reset"
 btn.addEventListener("click", buttonPressed)
 body.insertBefore(btn, body.children[0]);
+
+
 
 
 userInput();

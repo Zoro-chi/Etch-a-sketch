@@ -33,3 +33,6 @@
   box-shadow: 0 5px lime;
   transform: translateY(4px);
 }
+body {
+  background: cadetblue;
+}
